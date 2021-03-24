@@ -1,0 +1,326 @@
+:root {
+  --darkGray: hsl(0, 0%, 63%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --veryDarkGray: hsl(0, 0%, 27%);
+  --para: 12px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  scrollbar-width: none;
+}
+
+:focus {
+  outline: none;
+}
+
+
+/* ============
+headerContainer 
+=============== */
+
+.headerContainer {
+  width: 100%;
+  /* overflow-x: hidden; */
+  display: flex;
+}
+
+.navContainer {
+  height: 534px;
+  position: relative;
+}
+.navbar {
+  position: absolute;
+}
+
+.navHamburger .hamburgerIcon,
+.navHidden .crossIcon {
+  display: none;
+}
+
+.navHidden {
+  position: relative;
+  top: -23px;
+  left: 121px;
+  z-index: 1;
+}
+
+.navHamburger h2,
+.navHidden a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 30px 0 0 30px;
+  margin: auto;
+  position: relative;
+  font-weight: 700;
+}
+
+.navHamburger h2 {
+  cursor: context-menu;
+}
+
+.navHidden a {
+  font-size: var(--para);
+}
+
+.navHidden a:hover:not(:first-child, :last-child)::after {
+  content: "";
+  background: var(--white);
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  bottom: -8px;
+  left: 37px;
+}
+
+.navHidden a:last-child:hover::after {
+  content: "";
+  background: var(--white);
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  bottom: -8px;
+  left: 46px;
+}
+
+.headerImages {
+  width: 58vw;
+  height: 534px;
+}
+
+.headerImagesPicture {
+  display: none;
+}
+
+.headerImagesPicture img {
+  width: 100%;
+  height: 534px;
+}
+
+.arrSign {
+  position: absolute;
+  bottom: 0;
+  right: -60px;
+}
+
+.arrSign .arrSignBtn {
+  width: 60px;
+  height: 59px;
+  border: none;
+  background: var(--black);
+  position: relative;
+  cursor: pointer;
+}
+
+.arrSign .arrSignBtn:last-child {
+  position: absolute;
+}
+
+.arrSign .arrSignBtn:hover {
+  background: var(--veryDarkGray);
+}
+
+.headerContent {
+  padding: 50px;
+  margin: auto;
+}
+
+.headerContent h1,
+.headerContent .content {
+  padding-bottom: 30px;
+}
+
+.headerContent .shopBtn {
+  letter-spacing: 7px;
+  cursor: pointer;
+}
+
+.shopBtn {
+  margin-left: 25px;
+}
+
+.headerContent .shopBtn:hover {
+  color: var(--darkGray);
+}
+
+p:hover #shopBtnPath {
+  fill: var(--darkGray);
+}
+
+/* ============
+lastContainer 
+=============== */
+
+.lastContainer {
+  display: flex;
+}
+
+.lastContent {
+  padding: 30px;
+  margin: auto;
+}
+
+.lastContent h3 {
+  padding-bottom: 30px;
+}
+
+.headerContent p,
+.lastContent p {
+  font-size: var(--para);
+}
+
+/* ==================================== Media Query =========================== */
+
+@media screen and (max-width: 1130px) {
+
+  .headerContainer {
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .lastContainer {
+    display: block;
+    margin-top: 96px;
+    
+  }
+
+  .lastContent {
+    text-align: center;
+    width: 600px;
+  }
+
+  .lastImg  {
+    width: 420px;
+    margin: auto;
+  }
+
+  
+}
+
+@media screen and (max-width: 930px) {
+  .headerContainer {
+    display: block;
+    border: none;
+  }
+
+  .headerImages {
+    width: 100%;
+  }
+
+  .headerImages img {
+    width: 100%;
+  }
+
+  .arrSign {
+    right: 60px;
+  }
+
+  .headerContent,
+  .lastContent {
+    text-align: center;
+  }
+
+ 
+}
+
+@media screen and (max-width: 600px) {
+
+
+  .navHamburger {
+    position: relative;
+  }
+
+  .navHamburger button.hamburgerIcon {
+    display: block;
+    background: transparent;
+    border: none;
+    padding-left: 30px;
+    position: absolute;
+    bottom: 4px;
+    cursor: pointer;
+  }
+
+  .navHamburger h2 {
+    position: static;
+    text-align: center;
+    width: 90vw;
+  }
+
+  .navHidden .crossIcon {
+    display: block;
+  }
+
+  .navHiddenOpacity {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+
+  .navHidden {
+    width: 100vw;
+    height: 0;
+    background: var(--white);
+    overflow: hidden;
+    display: flex;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    position: fixed;
+  }
+
+  .navHidden a {
+    text-align: center;
+    padding: 30px;
+    color: var(--black);
+  }
+
+  .navHidden a:hover:not(:first-child, :last-child)::after {
+    background: #ee1c1c;
+    bottom: 20px;
+    left: 37px;
+  }
+
+  .navHidden a:hover:last-child::after {
+    background: #ee1c1c;
+    bottom: 20px;
+    right: 46px;
+  }
+
+  .lastContent {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .lastImg  {
+    width: 100%;
+  }
+
+  .lastImg img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navHamburger h2 {
+    position: static;
+    text-align: center;
+    width: 100vw;
+  }
+  .arrSign {
+    right: 41px;
+  }
+
+  .arrSign .arrSignBtn {
+    width: 40px;
+    height: 39px;
+  }
+
+  .navHidden a {
+    padding: 0px;
+  }
+}

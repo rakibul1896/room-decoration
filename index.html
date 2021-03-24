@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Room homepage</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    </style>
+  </head>
+  <body>
+
+  <div class="headerContainer"> <!--headerContainer start here -->
+    <div class="navContainer"><!-- navContainer start here -->
+      <div class="navbar"><!-- navbar start here -->
+        
+          <div class="navHamburger"><!-- navHamburger start here -->
+            <button class="hamburgerIcon" onclick="hamburger()">
+              <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#FFF" fill-rule="evenodd"/>
+              </svg>
+            </button>
+            <h2>room</h2>
+          </div><!-- navHamburger end here -->
+            <div class="navHiddenOpacity"></div>
+            <div class="navHidden"><!-- navHidden start here -->
+              <a class="crossIcon" href="#" onclick="closeNav()">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z" fill="#000" fill-rule="evenodd" opacity=".201"/>
+                </svg>
+              </a>
+              <a href="#">Home</a>
+              <a href="#">Shop</a>
+              <a href="#"> About</a>
+              <a href="#">Contact</a>
+            </div><!-- navHidden end here -->
+          
+        
+      </div><!-- navbar end here -->
+    
+      <div class="headerImages"><!--headerImages start here-->
+        <picture class="headerImagesPicture">
+          <source media="(max-width: 600px)" srcset="images\mobile-image-hero-1.jpg">
+          <img src="images\desktop-image-hero-1.jpg" alt="furniture">
+        </picture>
+        
+        <picture class="headerImagesPicture">
+          <source media="(max-width: 600px)" srcset="images\mobile-image-hero-2.jpg">
+          <img src="images\desktop-image-hero-2.jpg" alt="furniture">
+        </picture>
+        <picture class="headerImagesPicture">
+          <source media="(max-width: 600px)" srcset="images\mobile-image-hero-3.jpg">
+          <img src="images\desktop-image-hero-3.jpg" alt="furniture">
+        </picture>
+      </div><!--headerImages end here-->
+      <div class="arrSign"><!--arrSign start here-->
+         <button class="arrSignBtn" onclick="slideShowFunction(-1)"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path id="arrSignPath" d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg> </button>
+         <button class="arrSignBtn" onclick="slideShowFunction(1)"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path id="arrSignPath" d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+      </div><!--arrSign end here-->
+    </div> <!-- navContainer end here -->
+      <div class="headerContent"><!--headerContent start here-->
+        <h1>Discover innovative ways to decorate</h1>
+        <p class="content">We provide unmatched quality, comfort, and style for property owners across the country. 
+          Our experts combine form and function in bringing your vision to life. Create a room in your 
+          own style with our collection and make your property a reflection of you and what you love.</p>
+
+
+           <p class="shopBtn"> Shop now
+            <svg  width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path id="shopBtnPath" d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/>
+            </svg>
+          </p>
+            
+      </div><!--headerContent end here-->
+  </div><!--headerContainer start here -->
+
+
+
+  <div class="lastContainer">
+    
+    <div class="lastImg one">
+      
+        <img src="images\image-about-dark.jpg" alt="furniture">
+      
+    </div>
+    <div class="lastContent">
+      <h3>About our furniture</h3>
+      <p>Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+    </div>
+    <div class="lastImg">
+      <img src="images\image-about-light.jpg" alt="furniture">
+    </div>
+  </div>
+
+
+
+  
+    <script src="index.js"></script>
+  </body>
+</html>
