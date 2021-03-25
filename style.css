@@ -283,15 +283,18 @@ lastContainer
     text-align: center;
     padding: 0px;
     color: var(--black);
+    margin-top: 43px;
   }
 
   .navHidden a:hover:not(:first-child, :last-child)::after {
+    content: "";
     background: #ee1c1c;
     bottom: -7px;
     left: 10px;
   }
 
   .navHidden a:hover:last-child::after {
+    content: "";
     background: #ee1c1c;
     bottom: -7px;
     left: 16px;
